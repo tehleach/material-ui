@@ -28,6 +28,7 @@ const SelectField = React.createClass({
 
   propTypes: {
     autoWidth: React.PropTypes.bool,
+    className: React.PropTypes.string,
     disabled: React.PropTypes.bool,
     errorStyle: React.PropTypes.object,
     errorText: React.PropTypes.node,
@@ -132,6 +133,7 @@ const SelectField = React.createClass({
   render() {
     const styles = this.getStyles();
     const {
+      className,
       style,
       labelStyle,
       iconStyle,
@@ -152,6 +154,7 @@ const SelectField = React.createClass({
     } = this.props;
 
     const textFieldProps = {
+      className: className,
       style: this.mergeAndPrefix(styles.input, style),
       floatingLabelText: floatingLabelText,
       floatingLabelStyle: floatingLabelStyle,
